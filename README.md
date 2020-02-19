@@ -57,7 +57,7 @@ query {
 
 ```
 query {
-  cliente(id: 1) {
+  cliente(id: -1) {
     httpStatusCode
     errors
     message
@@ -83,8 +83,8 @@ query {
 ```
 mutation {
   inserirCliente(cliente: {
-    nome: "douglas"
-    idade: 29
+    nome: "Eduardo"
+    idade: 32
     idEndereco: 1    
   }) {
     httpStatusCode
@@ -103,9 +103,9 @@ mutation {
 ```
 mutation {
   atualizarCliente(cliente: {
-    id: 8
-    nome: "Priscila"
-    idade: 28
+    id: -1
+    nome: "Carlos"
+    idade: 45
     idEndereco: 2    
   }) {
     httpStatusCode
@@ -123,7 +123,7 @@ mutation {
 **Remover Cliente**
 ```
 mutation {
-  removerCliente(idCliente: 6) {
+  removerCliente(idCliente: -2) {
     httpStatusCode
   }
 }
@@ -160,7 +160,7 @@ query {
 
 ```
 query {
-  endereco(id: 1) {
+  endereco(id: -1) {
     httpStatusCode
     errors
     message
@@ -182,7 +182,7 @@ query {
 ```
 mutation {
   inserirEndereco(endereco: {
-    cep: "06329060"
+    cep: "06329000"
     numero: 25
     complemento: "casa 3"
   }) {
@@ -208,7 +208,7 @@ mutation {
 ```
 mutation {
   atualizarEndereco(endereco: {
-    id: 9
+    id: -2
     numero: 26
     complemento: "casa 4"
   }) {
@@ -234,7 +234,7 @@ mutation {
 
 ```
 mutation {
-  removerEndereco(idEndereco: 9) {
+  removerEndereco(idEndereco: -2) {
     httpStatusCode
   }
 }
