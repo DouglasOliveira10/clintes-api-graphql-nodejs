@@ -1,0 +1,58 @@
+#import Cliente from 'cliente.graphql'
+
+# Retorno paginado
+type PageEndereco {
+    httpStatusCode: Int,
+	errors: [String],
+	message: String,
+	data: ItemsEndereco
+}
+
+type ItemsEndereco {
+    items: [Endereco],
+	pageNumber: Int,
+	pageSize: Int, 
+	totalSize: Int
+}
+
+# Retorno comum
+type ResponseEndereco {
+    httpStatusCode: Int,
+	errors: [String],
+	message: String,
+	data: Endereco
+}
+
+# Retorno Lista
+type ResponseEnderecos {
+    httpStatusCode: Int,
+	errors: [String],
+	message: String,
+	data: [Endereco]
+}
+
+##########################################
+
+type Endereco {
+    id: Int,
+    cep: String,
+    logradouro: String,
+    numero: Int,
+    complemento: String,
+    bairro: String,
+    localidade: String,
+    uf: String
+    clientes: [Cliente]
+}
+
+input EnderecoInsert {
+    cep: String!,
+    numero: Int!,
+    complemento: String
+}
+
+input EnderecoUpdate {
+    id: Int!,
+    numero: Int!,
+    complemento: String    
+}

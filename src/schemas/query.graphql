@@ -1,0 +1,7 @@
+type Query {
+    clientes: PageCliente
+    cliente(id: Int): ResponseCliente
+
+    enderecos: PageEndereco
+    endereco(id: Int): ResponseEndereco
+}

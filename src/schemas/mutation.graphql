@@ -1,0 +1,9 @@
+type Mutation {
+    inserirCliente(cliente: ClienteInsert): ResponseCliente
+    atualizarCliente(cliente: ClienteUpdate): ResponseCliente
+    removerCliente(idCliente: Int): ResponseCliente
+
+    inserirEndereco(endereco: EnderecoInsert): ResponseEndereco
+    atualizarEndereco(endereco: EnderecoUpdate): ResponseEndereco
+    removerEndereco(idEndereco: Int): ResponseEndereco
+}

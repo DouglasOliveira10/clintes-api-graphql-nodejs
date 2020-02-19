@@ -1,0 +1,4 @@
+#import Cliente from './types/cliente.graphql'
+#import Endereco from './types/endereco.graphql'
+#import Query from 'query.graphql'
+#import Mutation from 'mutation.graphql'
